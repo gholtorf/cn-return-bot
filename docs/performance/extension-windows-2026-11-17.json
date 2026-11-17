@@ -1,0 +1,1348 @@
+{
+  "beforeChanges": {
+    "metadata": {
+      "recordedAt": "2026-11-17T20:10:11.555Z",
+      "cpu": "Intel(R) Core(TM) i7-14650HX",
+      "logicalCpus": 24,
+      "memoryGB": 31.71074676513672,
+      "platform": "win32",
+      "variants": [
+        "baseline"
+      ],
+      "repeats": 3,
+      "warmups": 3,
+      "indexSamples": 11,
+      "unrelatedUpdates": 4,
+      "articleUpdates": 2,
+      "settleMs": 800,
+      "note": "Local real extension and Supabase; intercepted Substack-shaped HTML; loopback permission granted; no live site or production database. CPU is renderer TaskDuration, not wall-clock wait time."
+    },
+    "results": [
+      {
+        "variant": "baseline",
+        "scenario": "short",
+        "repeat": 0,
+        "characters": 23374,
+        "indexMedianMs": 1.100000023841858,
+        "initialMarkerMs": 2039.7422000000006,
+        "initialCpuMs": 223.36700000000002,
+        "unrelatedCpuMs": 34.487999999999964,
+        "unrelatedRebuilds": 4,
+        "contentCpuMs": 10.840000000000016,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 13.824000000000003,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "bundleHash": "d9b6d2839d5999e6fa2749d5a89617c8c1c7a6f299abee55a13820f4fd1ec3c0"
+      },
+      {
+        "variant": "baseline",
+        "scenario": "long",
+        "repeat": 0,
+        "characters": 560574,
+        "indexMedianMs": 32.69999998807907,
+        "initialMarkerMs": 789.0586000000003,
+        "initialCpuMs": 576.744,
+        "unrelatedCpuMs": 234.5330000000001,
+        "unrelatedRebuilds": 4,
+        "contentCpuMs": 86.14999999999995,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 163.38199999999992,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "bundleHash": "d9b6d2839d5999e6fa2749d5a89617c8c1c7a6f299abee55a13820f4fd1ec3c0"
+      },
+      {
+        "variant": "baseline",
+        "scenario": "short",
+        "repeat": 1,
+        "characters": 23374,
+        "indexMedianMs": 1,
+        "initialMarkerMs": 402.52750000000015,
+        "initialCpuMs": 237.145,
+        "unrelatedCpuMs": 36.92700000000004,
+        "unrelatedRebuilds": 4,
+        "contentCpuMs": 15.112999999999987,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 17.533000000000023,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "bundleHash": "d9b6d2839d5999e6fa2749d5a89617c8c1c7a6f299abee55a13820f4fd1ec3c0"
+      },
+      {
+        "variant": "baseline",
+        "scenario": "long",
+        "repeat": 1,
+        "characters": 560574,
+        "indexMedianMs": 31.5,
+        "initialMarkerMs": 765.9298999999955,
+        "initialCpuMs": 594.215,
+        "unrelatedCpuMs": 182.871,
+        "unrelatedRebuilds": 4,
+        "contentCpuMs": 84.59700000000004,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 200.53900000000002,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "bundleHash": "d9b6d2839d5999e6fa2749d5a89617c8c1c7a6f299abee55a13820f4fd1ec3c0"
+      },
+      {
+        "variant": "baseline",
+        "scenario": "short",
+        "repeat": 2,
+        "characters": 23374,
+        "indexMedianMs": 1,
+        "initialMarkerMs": 381.19490000000224,
+        "initialCpuMs": 219.264,
+        "unrelatedCpuMs": 36.02100000000002,
+        "unrelatedRebuilds": 4,
+        "contentCpuMs": 11.06499999999999,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 16.986999999999973,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "bundleHash": "d9b6d2839d5999e6fa2749d5a89617c8c1c7a6f299abee55a13820f4fd1ec3c0"
+      },
+      {
+        "variant": "baseline",
+        "scenario": "long",
+        "repeat": 2,
+        "characters": 560574,
+        "indexMedianMs": 34.30000001192093,
+        "initialMarkerMs": 791.6682999999975,
+        "initialCpuMs": 602.487,
+        "unrelatedCpuMs": 208.07799999999997,
+        "unrelatedRebuilds": 4,
+        "contentCpuMs": 75.01700000000011,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 188.2870000000001,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "bundleHash": "d9b6d2839d5999e6fa2749d5a89617c8c1c7a6f299abee55a13820f4fd1ec3c0"
+      }
+    ]
+  },
+  "comparison": {
+    "metadata": {
+      "recordedAt": "2026-11-17T20:34:32.669Z",
+      "cpu": "Intel(R) Core(TM) i7-14650HX",
+      "logicalCpus": 24,
+      "memoryGB": 31.71074676513672,
+      "platform": "win32",
+      "variants": [
+        "baseline",
+        "filter",
+        "index",
+        "both"
+      ],
+      "repeats": 5,
+      "warmups": 3,
+      "indexSamples": 11,
+      "unrelatedUpdates": 4,
+      "articleUpdates": 2,
+      "settleMs": 800,
+      "note": "Local real extension and Supabase; intercepted Substack-shaped HTML; loopback permission granted; no live site or production database. CPU is renderer TaskDuration, not wall-clock wait time.",
+      "metricInterpretation": "Fields ending in CpuMs contain CDP TaskDuration in milliseconds using the default timeTicks domain: renderer task time, a CPU-work proxy rather than OS process CPU accounting."
+    },
+    "results": [
+      {
+        "variant": "baseline",
+        "scenario": "short",
+        "repeat": 0,
+        "characters": 23377,
+        "indexMedianMs": 1.399999976158142,
+        "initialMarkerMs": 1513.6676999999995,
+        "initialCpuMs": 215.899,
+        "unrelatedCpuMs": 42.88099999999997,
+        "unrelatedRebuilds": 4,
+        "contentCpuMs": 10.317999999999994,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 12.631999999999977,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "d9b6d2839d5999e6fa2749d5a89617c8c1c7a6f299abee55a13820f4fd1ec3c0"
+      },
+      {
+        "variant": "baseline",
+        "scenario": "long",
+        "repeat": 0,
+        "characters": 560577,
+        "indexMedianMs": 32.69999998807907,
+        "initialMarkerMs": 763.5627999999997,
+        "initialCpuMs": 589.692,
+        "unrelatedCpuMs": 260.7440000000001,
+        "unrelatedRebuilds": 4,
+        "contentCpuMs": 74.071,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 195.66700000000003,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "d9b6d2839d5999e6fa2749d5a89617c8c1c7a6f299abee55a13820f4fd1ec3c0"
+      },
+      {
+        "variant": "filter",
+        "scenario": "short",
+        "repeat": 0,
+        "characters": 23377,
+        "indexMedianMs": 1,
+        "initialMarkerMs": 2017.115600000001,
+        "initialCpuMs": 215.406,
+        "unrelatedCpuMs": 27.852000000000015,
+        "unrelatedRebuilds": 0,
+        "contentCpuMs": 14.365000000000016,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 13.593999999999994,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "cf2c8b13e54f2a661b7dd86c4c00c79b5350f695d354a91aafba499efa6b531b"
+      },
+      {
+        "variant": "filter",
+        "scenario": "long",
+        "repeat": 0,
+        "characters": 560577,
+        "indexMedianMs": 32.69999998807907,
+        "initialMarkerMs": 610.4020999999993,
+        "initialCpuMs": 546.44,
+        "unrelatedCpuMs": 26.44399999999991,
+        "unrelatedRebuilds": 0,
+        "contentCpuMs": 170.98900000000006,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 188.46699999999993,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "cf2c8b13e54f2a661b7dd86c4c00c79b5350f695d354a91aafba499efa6b531b"
+      },
+      {
+        "variant": "index",
+        "scenario": "short",
+        "repeat": 0,
+        "characters": 23377,
+        "indexMedianMs": 1.300000011920929,
+        "initialMarkerMs": 2030.0394000000015,
+        "initialCpuMs": 212.296,
+        "unrelatedCpuMs": 36.911,
+        "unrelatedRebuilds": 4,
+        "contentCpuMs": 11.302000000000007,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 13.589999999999991,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "cffa0d8753da90241ea6ca0fc67bdf5fb7e783cd60c6a53488aa7cc24b155b67"
+      },
+      {
+        "variant": "index",
+        "scenario": "long",
+        "repeat": 0,
+        "characters": 560577,
+        "indexMedianMs": 27.69999998807907,
+        "initialMarkerMs": 649.877999999997,
+        "initialCpuMs": 554.15,
+        "unrelatedCpuMs": 173.56500000000008,
+        "unrelatedRebuilds": 4,
+        "contentCpuMs": 77.63600000000004,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 168.527,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "cffa0d8753da90241ea6ca0fc67bdf5fb7e783cd60c6a53488aa7cc24b155b67"
+      },
+      {
+        "variant": "both",
+        "scenario": "short",
+        "repeat": 0,
+        "characters": 23377,
+        "indexMedianMs": 1.300000011920929,
+        "initialMarkerMs": 2030.1186000000016,
+        "initialCpuMs": 215.733,
+        "unrelatedCpuMs": 25.66099999999999,
+        "unrelatedRebuilds": 0,
+        "contentCpuMs": 11.50000000000001,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 12.207999999999997,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "4191a47231a64aada959145549717903a56f039366a7a5dfb6e5fcddeaa1e509"
+      },
+      {
+        "variant": "both",
+        "scenario": "long",
+        "repeat": 0,
+        "characters": 560577,
+        "indexMedianMs": 27.69999998807907,
+        "initialMarkerMs": 652.9971000000078,
+        "initialCpuMs": 569.414,
+        "unrelatedCpuMs": 26.706000000000007,
+        "unrelatedRebuilds": 0,
+        "contentCpuMs": 101.94800000000004,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 140.633,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "4191a47231a64aada959145549717903a56f039366a7a5dfb6e5fcddeaa1e509"
+      },
+      {
+        "variant": "baseline",
+        "scenario": "short",
+        "repeat": 1,
+        "characters": 23377,
+        "indexMedianMs": 1,
+        "initialMarkerMs": 377.7808999999979,
+        "initialCpuMs": 220.50300000000001,
+        "unrelatedCpuMs": 34.996,
+        "unrelatedRebuilds": 4,
+        "contentCpuMs": 10.836999999999986,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 16.378999999999976,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "d9b6d2839d5999e6fa2749d5a89617c8c1c7a6f299abee55a13820f4fd1ec3c0"
+      },
+      {
+        "variant": "baseline",
+        "scenario": "long",
+        "repeat": 1,
+        "characters": 560577,
+        "indexMedianMs": 32.30000001192093,
+        "initialMarkerMs": 659.0334999999905,
+        "initialCpuMs": 583.796,
+        "unrelatedCpuMs": 241.01400000000007,
+        "unrelatedRebuilds": 4,
+        "contentCpuMs": 53.991000000000014,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 223.42800000000008,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "d9b6d2839d5999e6fa2749d5a89617c8c1c7a6f299abee55a13820f4fd1ec3c0"
+      },
+      {
+        "variant": "both",
+        "scenario": "short",
+        "repeat": 1,
+        "characters": 23377,
+        "indexMedianMs": 1.300000011920929,
+        "initialMarkerMs": 368.4447999999975,
+        "initialCpuMs": 215.504,
+        "unrelatedCpuMs": 27.04999999999999,
+        "unrelatedRebuilds": 0,
+        "contentCpuMs": 13.604000000000033,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 12.062000000000017,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "4191a47231a64aada959145549717903a56f039366a7a5dfb6e5fcddeaa1e509"
+      },
+      {
+        "variant": "both",
+        "scenario": "long",
+        "repeat": 1,
+        "characters": 560577,
+        "indexMedianMs": 23.900000035762787,
+        "initialMarkerMs": 600.7439000000013,
+        "initialCpuMs": 507.53000000000003,
+        "unrelatedCpuMs": 27.383000000000045,
+        "unrelatedRebuilds": 0,
+        "contentCpuMs": 64.469,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 108.695,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "4191a47231a64aada959145549717903a56f039366a7a5dfb6e5fcddeaa1e509"
+      },
+      {
+        "variant": "index",
+        "scenario": "short",
+        "repeat": 1,
+        "characters": 23377,
+        "indexMedianMs": 1.5,
+        "initialMarkerMs": 375.7868999999773,
+        "initialCpuMs": 223.04399999999998,
+        "unrelatedCpuMs": 34.454000000000015,
+        "unrelatedRebuilds": 4,
+        "contentCpuMs": 11.575000000000003,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 15.32100000000003,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "cffa0d8753da90241ea6ca0fc67bdf5fb7e783cd60c6a53488aa7cc24b155b67"
+      },
+      {
+        "variant": "index",
+        "scenario": "long",
+        "repeat": 1,
+        "characters": 560577,
+        "indexMedianMs": 21.599999964237213,
+        "initialMarkerMs": 530.8389000000025,
+        "initialCpuMs": 412.08,
+        "unrelatedCpuMs": 115.29400000000001,
+        "unrelatedRebuilds": 4,
+        "contentCpuMs": 69.76399999999994,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 101.07699999999997,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "cffa0d8753da90241ea6ca0fc67bdf5fb7e783cd60c6a53488aa7cc24b155b67"
+      },
+      {
+        "variant": "filter",
+        "scenario": "short",
+        "repeat": 1,
+        "characters": 23377,
+        "indexMedianMs": 0.7999999523162842,
+        "initialMarkerMs": 377.98930000001565,
+        "initialCpuMs": 214.92799999999997,
+        "unrelatedCpuMs": 24.781,
+        "unrelatedRebuilds": 0,
+        "contentCpuMs": 13.882000000000005,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 12.17299999999999,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "cf2c8b13e54f2a661b7dd86c4c00c79b5350f695d354a91aafba499efa6b531b"
+      },
+      {
+        "variant": "filter",
+        "scenario": "long",
+        "repeat": 1,
+        "characters": 560577,
+        "indexMedianMs": 26,
+        "initialMarkerMs": 564.9701000000059,
+        "initialCpuMs": 487.91499999999996,
+        "unrelatedCpuMs": 27.18399999999993,
+        "unrelatedRebuilds": 0,
+        "contentCpuMs": 98.73099999999991,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 158.46300000000002,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "cf2c8b13e54f2a661b7dd86c4c00c79b5350f695d354a91aafba499efa6b531b"
+      },
+      {
+        "variant": "index",
+        "scenario": "short",
+        "repeat": 2,
+        "characters": 23377,
+        "indexMedianMs": 1.100000023841858,
+        "initialMarkerMs": 2039.6457999999984,
+        "initialCpuMs": 225.387,
+        "unrelatedCpuMs": 42.775000000000006,
+        "unrelatedRebuilds": 4,
+        "contentCpuMs": 14.217000000000034,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 13.573999999999975,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "cffa0d8753da90241ea6ca0fc67bdf5fb7e783cd60c6a53488aa7cc24b155b67"
+      },
+      {
+        "variant": "index",
+        "scenario": "long",
+        "repeat": 2,
+        "characters": 560577,
+        "indexMedianMs": 28.400000035762787,
+        "initialMarkerMs": 661.5627999999851,
+        "initialCpuMs": 585.7090000000001,
+        "unrelatedCpuMs": 189.51300000000003,
+        "unrelatedRebuilds": 4,
+        "contentCpuMs": 82.12699999999995,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 171.12499999999997,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "cffa0d8753da90241ea6ca0fc67bdf5fb7e783cd60c6a53488aa7cc24b155b67"
+      },
+      {
+        "variant": "both",
+        "scenario": "short",
+        "repeat": 2,
+        "characters": 23377,
+        "indexMedianMs": 1.199999988079071,
+        "initialMarkerMs": 2016.4721000000136,
+        "initialCpuMs": 214.30599999999998,
+        "unrelatedCpuMs": 27.719999999999995,
+        "unrelatedRebuilds": 0,
+        "contentCpuMs": 13.226000000000015,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 14.312999999999965,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "4191a47231a64aada959145549717903a56f039366a7a5dfb6e5fcddeaa1e509"
+      },
+      {
+        "variant": "both",
+        "scenario": "long",
+        "repeat": 2,
+        "characters": 560577,
+        "indexMedianMs": 29.19999998807907,
+        "initialMarkerMs": 622.6559000000125,
+        "initialCpuMs": 535.178,
+        "unrelatedCpuMs": 29.31600000000001,
+        "unrelatedRebuilds": 0,
+        "contentCpuMs": 82.41699999999996,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 168.13599999999994,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "4191a47231a64aada959145549717903a56f039366a7a5dfb6e5fcddeaa1e509"
+      },
+      {
+        "variant": "baseline",
+        "scenario": "short",
+        "repeat": 2,
+        "characters": 23377,
+        "indexMedianMs": 0.800000011920929,
+        "initialMarkerMs": 2016.2116999999853,
+        "initialCpuMs": 220.50300000000001,
+        "unrelatedCpuMs": 34.70800000000002,
+        "unrelatedRebuilds": 4,
+        "contentCpuMs": 11.526000000000035,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 13.873999999999997,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "d9b6d2839d5999e6fa2749d5a89617c8c1c7a6f299abee55a13820f4fd1ec3c0"
+      },
+      {
+        "variant": "baseline",
+        "scenario": "long",
+        "repeat": 2,
+        "characters": 560577,
+        "indexMedianMs": 33.69999998807907,
+        "initialMarkerMs": 717.4425000000047,
+        "initialCpuMs": 558.2239999999999,
+        "unrelatedCpuMs": 229.066,
+        "unrelatedRebuilds": 4,
+        "contentCpuMs": 89.36,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 141.239,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "d9b6d2839d5999e6fa2749d5a89617c8c1c7a6f299abee55a13820f4fd1ec3c0"
+      },
+      {
+        "variant": "filter",
+        "scenario": "short",
+        "repeat": 2,
+        "characters": 23377,
+        "indexMedianMs": 1,
+        "initialMarkerMs": 2009.039700000023,
+        "initialCpuMs": 223.602,
+        "unrelatedCpuMs": 24.648000000000003,
+        "unrelatedRebuilds": 0,
+        "contentCpuMs": 13.438000000000006,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 12.504000000000016,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "cf2c8b13e54f2a661b7dd86c4c00c79b5350f695d354a91aafba499efa6b531b"
+      },
+      {
+        "variant": "filter",
+        "scenario": "long",
+        "repeat": 2,
+        "characters": 560577,
+        "indexMedianMs": 15.300000011920929,
+        "initialMarkerMs": 673.8987000000197,
+        "initialCpuMs": 502.7010000000001,
+        "unrelatedCpuMs": 25.876000000000012,
+        "unrelatedRebuilds": 0,
+        "contentCpuMs": 102.171,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 154.73999999999998,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "cf2c8b13e54f2a661b7dd86c4c00c79b5350f695d354a91aafba499efa6b531b"
+      },
+      {
+        "variant": "index",
+        "scenario": "short",
+        "repeat": 3,
+        "characters": 23377,
+        "indexMedianMs": 1.399999976158142,
+        "initialMarkerMs": 390.24770000000717,
+        "initialCpuMs": 224.135,
+        "unrelatedCpuMs": 36.51499999999999,
+        "unrelatedRebuilds": 4,
+        "contentCpuMs": 10.362000000000037,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 12.934000000000001,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "cffa0d8753da90241ea6ca0fc67bdf5fb7e783cd60c6a53488aa7cc24b155b67"
+      },
+      {
+        "variant": "index",
+        "scenario": "long",
+        "repeat": 3,
+        "characters": 560577,
+        "indexMedianMs": 27.80000001192093,
+        "initialMarkerMs": 655.632099999988,
+        "initialCpuMs": 567.936,
+        "unrelatedCpuMs": 164.60600000000002,
+        "unrelatedRebuilds": 4,
+        "contentCpuMs": 43.713,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 137.91999999999993,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "cffa0d8753da90241ea6ca0fc67bdf5fb7e783cd60c6a53488aa7cc24b155b67"
+      },
+      {
+        "variant": "filter",
+        "scenario": "short",
+        "repeat": 3,
+        "characters": 23377,
+        "indexMedianMs": 1.199999988079071,
+        "initialMarkerMs": 369.0297000000137,
+        "initialCpuMs": 218.667,
+        "unrelatedCpuMs": 27.613,
+        "unrelatedRebuilds": 0,
+        "contentCpuMs": 12.36900000000002,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 14.197999999999988,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "cf2c8b13e54f2a661b7dd86c4c00c79b5350f695d354a91aafba499efa6b531b"
+      },
+      {
+        "variant": "filter",
+        "scenario": "long",
+        "repeat": 3,
+        "characters": 560577,
+        "indexMedianMs": 31.399999976158142,
+        "initialMarkerMs": 757.483600000036,
+        "initialCpuMs": 596.458,
+        "unrelatedCpuMs": 26.44099999999994,
+        "unrelatedRebuilds": 0,
+        "contentCpuMs": 166.66499999999996,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 192.78800000000007,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "cf2c8b13e54f2a661b7dd86c4c00c79b5350f695d354a91aafba499efa6b531b"
+      },
+      {
+        "variant": "baseline",
+        "scenario": "short",
+        "repeat": 3,
+        "characters": 23377,
+        "indexMedianMs": 0.7999999523162842,
+        "initialMarkerMs": 389.42050000000745,
+        "initialCpuMs": 226.239,
+        "unrelatedCpuMs": 40.54899999999997,
+        "unrelatedRebuilds": 4,
+        "contentCpuMs": 11.319999999999997,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 17.94100000000004,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "d9b6d2839d5999e6fa2749d5a89617c8c1c7a6f299abee55a13820f4fd1ec3c0"
+      },
+      {
+        "variant": "baseline",
+        "scenario": "long",
+        "repeat": 3,
+        "characters": 560577,
+        "indexMedianMs": 32.80000001192093,
+        "initialMarkerMs": 611.0582000000286,
+        "initialCpuMs": 531.438,
+        "unrelatedCpuMs": 241.11500000000007,
+        "unrelatedRebuilds": 4,
+        "contentCpuMs": 81.538,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 175.354,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "d9b6d2839d5999e6fa2749d5a89617c8c1c7a6f299abee55a13820f4fd1ec3c0"
+      },
+      {
+        "variant": "both",
+        "scenario": "short",
+        "repeat": 3,
+        "characters": 23377,
+        "indexMedianMs": 1.5,
+        "initialMarkerMs": 358.9472999999998,
+        "initialCpuMs": 210.895,
+        "unrelatedCpuMs": 24.603000000000012,
+        "unrelatedRebuilds": 0,
+        "contentCpuMs": 15.939000000000009,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 16.839999999999968,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "4191a47231a64aada959145549717903a56f039366a7a5dfb6e5fcddeaa1e509"
+      },
+      {
+        "variant": "both",
+        "scenario": "long",
+        "repeat": 3,
+        "characters": 560577,
+        "indexMedianMs": 29,
+        "initialMarkerMs": 613.0158999999985,
+        "initialCpuMs": 526.137,
+        "unrelatedCpuMs": 28.918,
+        "unrelatedRebuilds": 0,
+        "contentCpuMs": 147.61399999999992,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 206.66899999999998,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "4191a47231a64aada959145549717903a56f039366a7a5dfb6e5fcddeaa1e509"
+      },
+      {
+        "variant": "baseline",
+        "scenario": "short",
+        "repeat": 4,
+        "characters": 23377,
+        "indexMedianMs": 0.699999988079071,
+        "initialMarkerMs": 375.15789999999106,
+        "initialCpuMs": 220.977,
+        "unrelatedCpuMs": 39.728000000000016,
+        "unrelatedRebuilds": 4,
+        "contentCpuMs": 15.008999999999995,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 15.556000000000015,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "d9b6d2839d5999e6fa2749d5a89617c8c1c7a6f299abee55a13820f4fd1ec3c0"
+      },
+      {
+        "variant": "baseline",
+        "scenario": "long",
+        "repeat": 4,
+        "characters": 560577,
+        "indexMedianMs": 32.5,
+        "initialMarkerMs": 623.6571000000113,
+        "initialCpuMs": 547.778,
+        "unrelatedCpuMs": 240.81599999999992,
+        "unrelatedRebuilds": 4,
+        "contentCpuMs": 87.91099999999996,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 171.20500000000004,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "d9b6d2839d5999e6fa2749d5a89617c8c1c7a6f299abee55a13820f4fd1ec3c0"
+      },
+      {
+        "variant": "filter",
+        "scenario": "short",
+        "repeat": 4,
+        "characters": 23377,
+        "indexMedianMs": 0.7000000476837158,
+        "initialMarkerMs": 374.4572000000044,
+        "initialCpuMs": 223.924,
+        "unrelatedCpuMs": 25.608999999999995,
+        "unrelatedRebuilds": 0,
+        "contentCpuMs": 13.797000000000004,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 13.126999999999999,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "cf2c8b13e54f2a661b7dd86c4c00c79b5350f695d354a91aafba499efa6b531b"
+      },
+      {
+        "variant": "filter",
+        "scenario": "long",
+        "repeat": 4,
+        "characters": 560577,
+        "indexMedianMs": 32.89999997615814,
+        "initialMarkerMs": 779.9314000000013,
+        "initialCpuMs": 620.912,
+        "unrelatedCpuMs": 28.259000000000036,
+        "unrelatedRebuilds": 0,
+        "contentCpuMs": 133.64200000000005,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 157.96199999999993,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "cf2c8b13e54f2a661b7dd86c4c00c79b5350f695d354a91aafba499efa6b531b"
+      },
+      {
+        "variant": "index",
+        "scenario": "short",
+        "repeat": 4,
+        "characters": 23377,
+        "indexMedianMs": 1.4000000357627869,
+        "initialMarkerMs": 392.0060999999987,
+        "initialCpuMs": 227.557,
+        "unrelatedCpuMs": 39.349000000000025,
+        "unrelatedRebuilds": 4,
+        "contentCpuMs": 11.595000000000022,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 13.69600000000004,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "cffa0d8753da90241ea6ca0fc67bdf5fb7e783cd60c6a53488aa7cc24b155b67"
+      },
+      {
+        "variant": "index",
+        "scenario": "long",
+        "repeat": 4,
+        "characters": 560577,
+        "indexMedianMs": 26.200000047683716,
+        "initialMarkerMs": 643.6746000000276,
+        "initialCpuMs": 540.562,
+        "unrelatedCpuMs": 178.85300000000004,
+        "unrelatedRebuilds": 4,
+        "contentCpuMs": 60.51899999999999,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 126.85599999999997,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "cffa0d8753da90241ea6ca0fc67bdf5fb7e783cd60c6a53488aa7cc24b155b67"
+      },
+      {
+        "variant": "both",
+        "scenario": "short",
+        "repeat": 4,
+        "characters": 23377,
+        "indexMedianMs": 1.399999976158142,
+        "initialMarkerMs": 381.0899999999674,
+        "initialCpuMs": 220.172,
+        "unrelatedCpuMs": 27.46600000000002,
+        "unrelatedRebuilds": 0,
+        "contentCpuMs": 12.605000000000006,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 12.926999999999966,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "4191a47231a64aada959145549717903a56f039366a7a5dfb6e5fcddeaa1e509"
+      },
+      {
+        "variant": "both",
+        "scenario": "long",
+        "repeat": 4,
+        "characters": 560577,
+        "indexMedianMs": 29,
+        "initialMarkerMs": 651.5421000000788,
+        "initialCpuMs": 568.8080000000001,
+        "unrelatedCpuMs": 27.15500000000004,
+        "unrelatedRebuilds": 0,
+        "contentCpuMs": 88.07699999999996,
+        "contentRebuilds": 2,
+        "replacementCpuMs": 144.16799999999995,
+        "replacementRebuilds": 2,
+        "markers": 1,
+        "themeChecked": true,
+        "movedRebuilds": 1,
+        "bundleHash": "4191a47231a64aada959145549717903a56f039366a7a5dfb6e5fcddeaa1e509"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "variant": "baseline",
+      "baseCommit": "756b4dd388173e86e3a273c061f16fbada7f03db",
+      "anchorSourceHash": "72d3a9a86957516f0695cc29a3d2735dc80aebdb6b705ec7bc27769035f9ebe0",
+      "mountSourceHash": "bed619b8526c889d7e3f3f174bf51461acf248eb2738630523d42d0179b20f8e",
+      "mutationHelperHash": "189cbbffc9597ae7fe4605bb29172ba0234a3b63acfcb8c419466127c5698cd3",
+      "noteScriptHash": "d9b6d2839d5999e6fa2749d5a89617c8c1c7a6f299abee55a13820f4fd1ec3c0"
+    },
+    {
+      "variant": "filter",
+      "baseCommit": "756b4dd388173e86e3a273c061f16fbada7f03db",
+      "anchorSourceHash": "72d3a9a86957516f0695cc29a3d2735dc80aebdb6b705ec7bc27769035f9ebe0",
+      "mountSourceHash": "923a8caaddf091234ebf61f7a5068621b5a9877de517e61400ca8659d41f02e6",
+      "mutationHelperHash": "189cbbffc9597ae7fe4605bb29172ba0234a3b63acfcb8c419466127c5698cd3",
+      "noteScriptHash": "cf2c8b13e54f2a661b7dd86c4c00c79b5350f695d354a91aafba499efa6b531b"
+    },
+    {
+      "variant": "index",
+      "baseCommit": "756b4dd388173e86e3a273c061f16fbada7f03db",
+      "anchorSourceHash": "250f69541a9261046791e27592c322b32c757c67dc75b6684528df20527c4e3a",
+      "mountSourceHash": "bed619b8526c889d7e3f3f174bf51461acf248eb2738630523d42d0179b20f8e",
+      "mutationHelperHash": "189cbbffc9597ae7fe4605bb29172ba0234a3b63acfcb8c419466127c5698cd3",
+      "noteScriptHash": "cffa0d8753da90241ea6ca0fc67bdf5fb7e783cd60c6a53488aa7cc24b155b67"
+    },
+    {
+      "variant": "both",
+      "baseCommit": "756b4dd388173e86e3a273c061f16fbada7f03db",
+      "anchorSourceHash": "250f69541a9261046791e27592c322b32c757c67dc75b6684528df20527c4e3a",
+      "mountSourceHash": "923a8caaddf091234ebf61f7a5068621b5a9877de517e61400ca8659d41f02e6",
+      "mutationHelperHash": "189cbbffc9597ae7fe4605bb29172ba0234a3b63acfcb8c419466127c5698cd3",
+      "noteScriptHash": "4191a47231a64aada959145549717903a56f039366a7a5dfb6e5fcddeaa1e509"
+    }
+  ],
+  "summaries": [
+    {
+      "scenario": "short",
+      "variants": [
+        {
+          "variant": "baseline",
+          "count": 5,
+          "characters": 23377,
+          "unrelatedRebuilds": [
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "metrics": {
+            "indexMedianMs": {
+              "median": 0.800000011920929,
+              "min": 0.699999988079071,
+              "max": 1.399999976158142
+            },
+            "initialMarkerMs": {
+              "median": 389.42050000000745,
+              "min": 375.15789999999106,
+              "max": 2016.2116999999853
+            },
+            "initialCpuMs": {
+              "median": 220.50300000000001,
+              "min": 215.899,
+              "max": 226.239
+            },
+            "unrelatedCpuMs": {
+              "median": 39.728000000000016,
+              "min": 34.70800000000002,
+              "max": 42.88099999999997
+            },
+            "contentCpuMs": {
+              "median": 11.319999999999997,
+              "min": 10.317999999999994,
+              "max": 15.008999999999995
+            },
+            "replacementCpuMs": {
+              "median": 15.556000000000015,
+              "min": 12.631999999999977,
+              "max": 17.94100000000004
+            },
+            "totalCpuMs": {
+              "median": 282.715,
+              "min": 280.6110000000001,
+              "max": 296.049
+            }
+          }
+        },
+        {
+          "variant": "filter",
+          "count": 5,
+          "characters": 23377,
+          "unrelatedRebuilds": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "metrics": {
+            "indexMedianMs": {
+              "median": 1,
+              "min": 0.7000000476837158,
+              "max": 1.199999988079071
+            },
+            "initialMarkerMs": {
+              "median": 377.98930000001565,
+              "min": 369.0297000000137,
+              "max": 2017.115600000001
+            },
+            "initialCpuMs": {
+              "median": 218.667,
+              "min": 214.92799999999997,
+              "max": 223.924
+            },
+            "unrelatedCpuMs": {
+              "median": 25.608999999999995,
+              "min": 24.648000000000003,
+              "max": 27.852000000000015
+            },
+            "contentCpuMs": {
+              "median": 13.797000000000004,
+              "min": 12.36900000000002,
+              "max": 14.365000000000016
+            },
+            "replacementCpuMs": {
+              "median": 13.126999999999999,
+              "min": 12.17299999999999,
+              "max": 14.197999999999988
+            },
+            "totalCpuMs": {
+              "median": 272.847,
+              "min": 265.76399999999995,
+              "max": 276.45700000000005
+            }
+          }
+        },
+        {
+          "variant": "index",
+          "count": 5,
+          "characters": 23377,
+          "unrelatedRebuilds": [
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "metrics": {
+            "indexMedianMs": {
+              "median": 1.399999976158142,
+              "min": 1.100000023841858,
+              "max": 1.5
+            },
+            "initialMarkerMs": {
+              "median": 392.0060999999987,
+              "min": 375.7868999999773,
+              "max": 2039.6457999999984
+            },
+            "initialCpuMs": {
+              "median": 224.135,
+              "min": 212.296,
+              "max": 227.557
+            },
+            "unrelatedCpuMs": {
+              "median": 36.911,
+              "min": 34.454000000000015,
+              "max": 42.775000000000006
+            },
+            "contentCpuMs": {
+              "median": 11.575000000000003,
+              "min": 10.362000000000037,
+              "max": 14.217000000000034
+            },
+            "replacementCpuMs": {
+              "median": 13.589999999999991,
+              "min": 12.934000000000001,
+              "max": 15.32100000000003
+            },
+            "totalCpuMs": {
+              "median": 284.394,
+              "min": 274.099,
+              "max": 295.95300000000003
+            }
+          }
+        },
+        {
+          "variant": "both",
+          "count": 5,
+          "characters": 23377,
+          "unrelatedRebuilds": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "metrics": {
+            "indexMedianMs": {
+              "median": 1.300000011920929,
+              "min": 1.199999988079071,
+              "max": 1.5
+            },
+            "initialMarkerMs": {
+              "median": 381.0899999999674,
+              "min": 358.9472999999998,
+              "max": 2030.1186000000016
+            },
+            "initialCpuMs": {
+              "median": 215.504,
+              "min": 210.895,
+              "max": 220.172
+            },
+            "unrelatedCpuMs": {
+              "median": 27.04999999999999,
+              "min": 24.603000000000012,
+              "max": 27.719999999999995
+            },
+            "contentCpuMs": {
+              "median": 13.226000000000015,
+              "min": 11.50000000000001,
+              "max": 15.939000000000009
+            },
+            "replacementCpuMs": {
+              "median": 12.926999999999966,
+              "min": 12.062000000000017,
+              "max": 16.839999999999968
+            },
+            "totalCpuMs": {
+              "median": 268.277,
+              "min": 265.102,
+              "max": 273.16999999999996
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "long",
+      "variants": [
+        {
+          "variant": "baseline",
+          "count": 5,
+          "characters": 560577,
+          "unrelatedRebuilds": [
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "metrics": {
+            "indexMedianMs": {
+              "median": 32.69999998807907,
+              "min": 32.30000001192093,
+              "max": 33.69999998807907
+            },
+            "initialMarkerMs": {
+              "median": 659.0334999999905,
+              "min": 611.0582000000286,
+              "max": 763.5627999999997
+            },
+            "initialCpuMs": {
+              "median": 558.2239999999999,
+              "min": 531.438,
+              "max": 589.692
+            },
+            "unrelatedCpuMs": {
+              "median": 241.01400000000007,
+              "min": 229.066,
+              "max": 260.7440000000001
+            },
+            "contentCpuMs": {
+              "median": 81.538,
+              "min": 53.991000000000014,
+              "max": 89.36
+            },
+            "replacementCpuMs": {
+              "median": 175.354,
+              "min": 141.239,
+              "max": 223.42800000000008
+            },
+            "totalCpuMs": {
+              "median": 1047.71,
+              "min": 1017.889,
+              "max": 1120.1740000000002
+            }
+          }
+        },
+        {
+          "variant": "filter",
+          "count": 5,
+          "characters": 560577,
+          "unrelatedRebuilds": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "metrics": {
+            "indexMedianMs": {
+              "median": 31.399999976158142,
+              "min": 15.300000011920929,
+              "max": 32.89999997615814
+            },
+            "initialMarkerMs": {
+              "median": 673.8987000000197,
+              "min": 564.9701000000059,
+              "max": 779.9314000000013
+            },
+            "initialCpuMs": {
+              "median": 546.44,
+              "min": 487.91499999999996,
+              "max": 620.912
+            },
+            "unrelatedCpuMs": {
+              "median": 26.44399999999991,
+              "min": 25.876000000000012,
+              "max": 28.259000000000036
+            },
+            "contentCpuMs": {
+              "median": 133.64200000000005,
+              "min": 98.73099999999991,
+              "max": 170.98900000000006
+            },
+            "replacementCpuMs": {
+              "median": 158.46300000000002,
+              "min": 154.73999999999998,
+              "max": 192.78800000000007
+            },
+            "totalCpuMs": {
+              "median": 932.3399999999999,
+              "min": 772.2929999999999,
+              "max": 982.3519999999999
+            }
+          }
+        },
+        {
+          "variant": "index",
+          "count": 5,
+          "characters": 560577,
+          "unrelatedRebuilds": [
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "metrics": {
+            "indexMedianMs": {
+              "median": 27.69999998807907,
+              "min": 21.599999964237213,
+              "max": 28.400000035762787
+            },
+            "initialMarkerMs": {
+              "median": 649.877999999997,
+              "min": 530.8389000000025,
+              "max": 661.5627999999851
+            },
+            "initialCpuMs": {
+              "median": 554.15,
+              "min": 412.08,
+              "max": 585.7090000000001
+            },
+            "unrelatedCpuMs": {
+              "median": 173.56500000000008,
+              "min": 115.29400000000001,
+              "max": 189.51300000000003
+            },
+            "contentCpuMs": {
+              "median": 69.76399999999994,
+              "min": 43.713,
+              "max": 82.12699999999995
+            },
+            "replacementCpuMs": {
+              "median": 137.91999999999993,
+              "min": 101.07699999999997,
+              "max": 171.12499999999997
+            },
+            "totalCpuMs": {
+              "median": 914.175,
+              "min": 698.2149999999999,
+              "max": 1028.474
+            }
+          }
+        },
+        {
+          "variant": "both",
+          "count": 5,
+          "characters": 560577,
+          "unrelatedRebuilds": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "metrics": {
+            "indexMedianMs": {
+              "median": 29,
+              "min": 23.900000035762787,
+              "max": 29.19999998807907
+            },
+            "initialMarkerMs": {
+              "median": 622.6559000000125,
+              "min": 600.7439000000013,
+              "max": 652.9971000000078
+            },
+            "initialCpuMs": {
+              "median": 535.178,
+              "min": 507.53000000000003,
+              "max": 569.414
+            },
+            "unrelatedCpuMs": {
+              "median": 27.383000000000045,
+              "min": 26.706000000000007,
+              "max": 29.31600000000001
+            },
+            "contentCpuMs": {
+              "median": 88.07699999999996,
+              "min": 64.469,
+              "max": 147.61399999999992
+            },
+            "replacementCpuMs": {
+              "median": 144.16799999999995,
+              "min": 108.695,
+              "max": 206.66899999999998
+            },
+            "totalCpuMs": {
+              "median": 828.2080000000001,
+              "min": 708.077,
+              "max": 909.3379999999999
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

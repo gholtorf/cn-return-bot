@@ -52,7 +52,19 @@ function Invoke-Stack([string[]]$StackArgs) {
         Assert-Exit 'Extracting Supabase CLI'
     }
     $cliWsl = (& wsl.exe -d Ubuntu --exec wslpath -a $cli).Trim()
-    & wsl.exe -d Ubuntu --exec $cliWsl @StackArgs --workdir .local-test --stack manual-notes
+    $savedStatus = Join-Path $stateDir 'status.json'
+    if (Test-Path -LiteralPath $savedStatus) {
+        $saved = Get-Content -LiteralPath $savedStatus -Raw | ConvertFrom-Json
+        # The CLI normally chooses a different stack for every Git branch.
+        # Reuse this working copy's saved local stack across branch switches.
+        if ($saved.identity.id) {
+            & wsl.exe -d Ubuntu --exec $cliWsl @StackArgs --workdir .local-test --stack-id $saved.identity.id
+        } else {
+            & wsl.exe -d Ubuntu --exec $cliWsl @StackArgs --workdir .local-test --stack manual-notes
+        }
+    } else {
+        & wsl.exe -d Ubuntu --exec $cliWsl @StackArgs --workdir .local-test --stack manual-notes
+    }
     Assert-Exit 'Local Supabase command'
 }
 function Start-Stack {

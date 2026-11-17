@@ -45,7 +45,7 @@ export function indexContainer(container: Element): TextIndex {
   const walker = doc.createTreeWalker(container, SHOW_TEXT);
 
   const segments: { node: Text; start: number }[] = [];
-  let norm = "";
+  const normalized: string[] = [];
   const normToRaw: number[] = [];
   let rawLength = 0;
   // The raw offset of the first character of the gap that is currently open. A
@@ -58,15 +58,23 @@ export function indexContainer(container: Element): TextIndex {
     segments.push({ node, start: rawLength });
     const text = node.data;
     for (let i = 0; i < text.length; i++) {
-      const lower = text[i]!.toLowerCase();
-      const isAlnum = (lower >= "a" && lower <= "z") || (lower >= "0" && lower <= "9");
+      const code = text.charCodeAt(i);
+      let lower = "";
+      if ((code >= 97 && code <= 122) || (code >= 48 && code <= 57)) lower = text[i]!;
+      else if (code >= 65 && code <= 90) lower = String.fromCharCode(code + 32);
+      else if (code > 127) {
+        // Preserve the existing Unicode case folding, including Kelvin's K.
+        const folded = text[i]!.toLowerCase();
+        if ((folded >= "a" && folded <= "z") || (folded >= "0" && folded <= "9")) lower = folded;
+      }
+      const isAlnum = lower !== "";
       if (isAlnum) {
-        if (gapStart >= 0 && norm.length > 0) {
-          norm += " ";
+        if (gapStart >= 0 && normalized.length > 0) {
+          normalized.push(" ");
           normToRaw.push(gapStart);
         }
         gapStart = -1;
-        norm += lower;
+        normalized.push(lower);
         normToRaw.push(rawLength + i);
       } else if (gapStart < 0) {
         gapStart = rawLength + i;
@@ -79,7 +87,7 @@ export function indexContainer(container: Element): TextIndex {
     rawLength += text.length;
   }
 
-  return { segments, norm, normToRaw };
+  return { segments, norm: normalized.join(""), normToRaw };
 }
 
 // A quote with fewer normalized characters than this is too generic to anchor

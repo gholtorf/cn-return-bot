@@ -64,6 +64,8 @@ Run these from the repository root in PowerShell:
 
 `Start-Local-Notes.cmd` starts services without opening a browser.
 Close the isolated browser window when finished. Local notes persist across restarts.
+The launcher reuses this working copy's saved stack ID when you switch Git
+branches, keeping the same local notes and avoiding competing stacks on the same ports.
 
 Setup downloads workspace-local Bun 1.4.4, Supabase CLI 3.2.0, and stable Chrome
 for Testing 157.0.8103.78. If a suitable Node.js is unavailable, the browser

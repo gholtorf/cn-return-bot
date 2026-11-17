@@ -42,6 +42,9 @@ For an isolated Windows environment and manual-note testing with the browser
 extension, see [Windows local notes](docs/windows-local-notes.md). The root
 `Test-Manual-Notes.cmd` opens the prepared local test browser.
 
+The [extension performance report](docs/performance/extension-windows-2026-11-17.md)
+records before/after measurements on this Windows PC and commands to repeat them.
+
 The [Signal group bot](scripts/signal-bot/README.md) checks pasted tweets, drafts and
 discusses notes, and submits the current draft when someone says “yes post”.
 Run `bun src/signal-bot/main.ts --help` for local usage and setup requirements.

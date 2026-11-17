@@ -8,6 +8,7 @@ import { fetchItemForUrl } from "@cn/core/items";
 import { normalizePageUrl } from "@cn/core/pageUrls";
 import { resolveReaderCanonical } from "./readerCanonical";
 import { anchorGroups } from "./anchorGroups";
+import { articleMutationsMatter } from "./articleMutations";
 import { applyHighlights, clearHighlights, ensureHighlightStyle, hasHighlightApi } from "./passageHighlights";
 import { claimGroups, itemNoteSetQuery, noteCounts } from "./claimGroups";
 import { mountCoverageBadges } from "./coverageBadges";
@@ -145,6 +146,7 @@ async function mountForUrl(ctx: ContentScriptContext, href: string, onCoverageCh
   // single-page app can replace the article element after we mounted. Anchoring
   // against a node that is no longer in the document would then find nothing, and it
   // would keep finding nothing.
+  let anchoredContainer: Element | null = null;
   const render = () => {
     syncTheme(); // Called here as well, so the debounced re-anchor observer catches
     // theme repaints that arrive as DOM swaps rather than as attribute changes.
@@ -154,6 +156,7 @@ async function mountForUrl(ctx: ContentScriptContext, href: string, onCoverageCh
     // the debounced observer once, and then everything settles.
     if (!inlineUi.shadowHost.isConnected) inlineUi.mount();
     const container = findContainer();
+    anchoredContainer = container;
     const anchored = anchorGroups(container, claimGroups(noteSet, display));
     // A claim set to dot only gets its marker and no tint.
     applyHighlights(anchored.filter((g) => g.display !== "dot").map((g) => g.range));
@@ -231,8 +234,11 @@ async function mountForUrl(ctx: ContentScriptContext, href: string, onCoverageCh
   // attached to a node nobody uses. Our own UI cannot trigger this observer. It
   // renders inside a shadow root, and an observer on the light DOM does not see
   // into shadow roots.
+  // Sidebar and other unrelated updates leave the ranges intact. Article
+  // replacement, moves and stylesheet changes still go through the re-anchor.
   let timer: ReturnType<typeof setTimeout> | undefined;
-  const observer = new MutationObserver(() => {
+  const observer = new MutationObserver((mutations) => {
+    if (!articleMutationsMatter(mutations, findContainer(), anchoredContainer)) return;
     clearTimeout(timer);
     timer = setTimeout(render, REANCHOR_DEBOUNCE_MS);
   });

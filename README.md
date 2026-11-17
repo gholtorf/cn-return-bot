@@ -38,6 +38,10 @@ replaying saved inputs and forcing experiment variants.
 
 Dashboard commands and builds are in [package.json](package.json).
 
+For an isolated Windows environment and manual-note testing with the browser
+extension, see [Windows local notes](docs/windows-local-notes.md). The root
+`Test-Manual-Notes.cmd` opens the prepared local test browser.
+
 The [Signal group bot](scripts/signal-bot/README.md) checks pasted tweets, drafts and
 discusses notes, and submits the current draft when someone says “yes post”.
 Run `bun src/signal-bot/main.ts --help` for local usage and setup requirements.

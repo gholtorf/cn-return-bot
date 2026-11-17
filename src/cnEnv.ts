@@ -42,6 +42,9 @@ function applyModeEnvFiles(mode: string): void {
 export function settleSupabaseEnv(command: "build" | "serve", mode: string): void {
   applyModeEnvFiles(mode);
   const env = loadEnv(mode, ENV_DIR, "");
+  if (mode === "manual-test" && !["127.0.0.1", "localhost", "[::1]"].includes(new URL(env.VITE_SUPABASE_URL || "http://missing.invalid").hostname)) {
+    throw new Error("The manual-test mode requires a local Supabase URL. Refusing to connect this test build to a hosted database.");
+  }
   if (command === "build" && (!env.VITE_SUPABASE_URL || !env.VITE_SUPABASE_ANON_KEY)) {
     throw new Error("Refusing to build without VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY. Use --mode prod-backend or set the variables.");
   }

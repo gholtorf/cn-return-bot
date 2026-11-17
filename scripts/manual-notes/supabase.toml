@@ -1,0 +1,42 @@
+project_id = "cn-manual-local"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+port = 54322
+major_version = 17
+health_timeout = "5m"
+
+[db.seed]
+enabled = false
+
+[auth]
+enabled = true
+site_url = "http://127.0.0.1:8003"
+additional_redirect_urls = ["http://127.0.0.1:8003/**", "http://localhost:8003/**", "https://*.chromiumapp.org/**", "https://*.extensions.allizom.org/**"]
+enable_anonymous_sign_ins = true
+enable_manual_linking = true
+
+[auth.email]
+enabled = true
+enable_confirmations = false
+otp_length = 6
+
+[local_smtp]
+enabled = true
+port = 54324
+
+[studio]
+enabled = true
+port = 54323
+
+[analytics]
+enabled = false
+
+[experimental]
+stack = true

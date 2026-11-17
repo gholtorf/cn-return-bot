@@ -36,9 +36,9 @@ export default defineConfig({
   // send to reviewers with `git archive` instead. This exclusion is a second line of
   // defence.
   zip: { excludeSources: ["chrome-signing-key.pem", "store-assets/**"] },
-  manifest: ({ browser }) => ({
+  manifest: ({ browser, mode }) => ({
     version: "0.6.0",
-    name: "Common Notes",
+    name: mode === "manual-test" ? "Common Notes (Local Test)" : "Common Notes",
     description: "Community Notes Everywhere",
     icons: { 16: "icon/16.png", 32: "icon/32.png", 48: "icon/48.png", 128: "icon/128.png" },
     action: { default_icon: { 16: "icon/16.png", 32: "icon/32.png" } },
@@ -56,7 +56,7 @@ export default defineConfig({
     // at install, and each user allows sites from the toolbar button, which is
     // why the Safari welcome page asks for "Always Allow on Every Website".
     host_permissions: ["<all_urls>"],
-    ...(browser === "chrome" ? { key: CHROME_PUBLIC_KEY } : {}),
+    ...(browser === "chrome" && mode !== "manual-test" ? { key: CHROME_PUBLIC_KEY } : {}),
     ...(browser === "firefox" ? { browser_specific_settings: {
       // A fixed add-on ID keeps the OAuth redirect URL on extensions.allizom.org
       // the same across every Firefox install. This is not the original ID. AMO
@@ -65,7 +65,7 @@ export default defineConfig({
       // attempt in August 2026. Never delete the AMO listing, because the ID dies
       // with it.
       gecko: {
-        id: "extension@commonnotes.net",
+        id: mode === "manual-test" ? "local-test@commonnotes.net" : "extension@commonnotes.net",
         // Mozilla's built-in data consent. It has been mandatory for new AMO
         // submissions since November 2025, and Firefox 140 and later show it at
         // install time. Reading notes sends the URL of a covered page to our API.

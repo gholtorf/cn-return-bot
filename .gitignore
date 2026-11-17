@@ -151,3 +151,7 @@ src/everything-extension/chrome-signing-key.pem
 src/everything-extension/safari/build/
 xcuserdata/
 src/note-tweets/.state/
+
+# Isolated Windows manual-note test stack, logs and browser profile
+.local-test/
+.env.manual-test.local

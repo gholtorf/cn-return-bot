@@ -37,6 +37,9 @@ Step 3 goes away once the app is signed by an Apple developer team (`CN_APPLE_TE
 
 ## Development
 
+For a local Windows database, a preloaded test browser and manual-note checks,
+see [Windows local notes](../../docs/windows-local-notes.md).
+
 ```bash
 bun run dev-ext        # dev mode against PROD backend; load .output/chrome-mv3-prod-backend unpacked once
 bun run dev-ext-local  # dev mode against the local Supabase (root .env)

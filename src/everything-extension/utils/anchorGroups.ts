@@ -48,14 +48,15 @@ function findClaimImageRange(container: Element, imageUrls: string[]): Range | n
  *  A claim that has no anchorable text but carries images, such as a note on a
  *  chart, anchors to its image. */
 export function anchorGroups(container: Element, groups: ClaimGroup[]): AnchoredGroup[] {
-  const index = indexContainer(container);
+  // Empty, hidden and image-only note sets never need a text walk.
+  let index: ReturnType<typeof indexContainer> | undefined;
   const anchored: AnchoredGroup[] = [];
   for (const group of groups) {
     const { claim } = group;
     const candidates = [claim.updated_quote, claim.context_quote, claim.context_paragraph];
     let range: Range | null = null;
     for (const candidate of candidates) {
-      if (candidate) range = findQuoteRange(index, candidate);
+      if (candidate) range = findQuoteRange(index ??= indexContainer(container), candidate);
       if (range) break;
     }
     if (!range && claim.image_urls.length > 0) range = findClaimImageRange(container, claim.image_urls);

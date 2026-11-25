@@ -35,5 +35,5 @@
       "@cn/features/*": ["./src/everything-features/*"]
     }
   },
-  "exclude": ["src/review-dashboard/**/*", "src/everything-extension/**/*", "src/scripts_jim/**/*", "src/scripts_nathan/**/*", "node_modules"]
+  "exclude": ["scripts/performance/followup-browser.ts", "src/review-dashboard/**/*", "src/everything-extension/**/*", "src/scripts_jim/**/*", "src/scripts_nathan/**/*", "node_modules"]
 }

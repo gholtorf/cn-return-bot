@@ -33,6 +33,7 @@ import {
   type ServiceErrorResponse,
 } from "../contract";
 import { requiredEnv } from "../serve";
+import { coalesceFetch } from "./coalesceFetch";
 
 /** The fetch ladder needs about two minutes in the worst case, and the answer
  *  is only sent at the end. Bun caps this value at 255 seconds. Bun's types
@@ -45,12 +46,17 @@ const IDLE_TIMEOUT_SECONDS = 255;
  *  the services run as a different user than the fetcher does. */
 const SOCKET_MODE = 0o666;
 
+const fetchPage = coalesceFetch(fetchPageWithLadder);
+const fetchApi = coalesceFetch(fetchApiPlain);
+const fetchBrowserApi = coalesceFetch(fetchApiInBrowser);
+const fetchImage = coalesceFetch(downloadImageInlineData);
+
 const routes: Record<string, (body: any) => Promise<unknown>> = {
-  [FETCH_PAGE_PATH]: (body: FetchUrlRequest) => fetchPageWithLadder(body.url),
-  [FETCH_API_PATH]: (body: FetchUrlRequest) => fetchApiPlain(body.url),
-  [FETCH_API_IN_BROWSER_PATH]: (body: FetchUrlRequest) => fetchApiInBrowser(body.url),
+  [FETCH_PAGE_PATH]: (body: FetchUrlRequest) => fetchPage(body.url),
+  [FETCH_API_PATH]: (body: FetchUrlRequest) => fetchApi(body.url),
+  [FETCH_API_IN_BROWSER_PATH]: (body: FetchUrlRequest) => fetchBrowserApi(body.url),
   [MINISITE_PAGE_PATH]: (body: MinisitePageRequest) => minisitePageAnswer(body.url, body.page),
-  [FETCH_IMAGE_PATH]: (body: FetchUrlRequest) => downloadImageInlineData(body.url),
+  [FETCH_IMAGE_PATH]: (body: FetchUrlRequest) => fetchImage(body.url),
 };
 
 export function startFetchService(socketPath: string) {

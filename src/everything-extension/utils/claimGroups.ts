@@ -44,23 +44,25 @@ const DISPLAY_RANK = ["open", "collapse", "dot"] as const;
 /** The claims of a page that have at least one note the reader has not
  *  hidden, each with those notes, original first. */
 export function claimGroups({ notes, nnn }: NoteSet, display: NoteDisplaySettings): ClaimGroup[] {
-  const byClaim = new Map<string, NoteRow[]>();
+  const byClaim = new Map<string, ClaimGroup>();
   for (const note of notes.values()) {
-    if (display[noteStatus(note)] === "hide") continue;
-    byClaim.set(note.claim_id, [...(byClaim.get(note.claim_id) ?? []), note]);
+    const status = noteStatus(note);
+    const level = display[status];
+    if (level === "hide") continue;
+    const group = byClaim.get(note.claim_id);
+    if (group) {
+      group.notes.push(note);
+      if (STATUS_RANK.indexOf(status) < STATUS_RANK.indexOf(group.status)) group.status = status;
+      if (DISPLAY_RANK.indexOf(level) < DISPLAY_RANK.indexOf(group.display)) group.display = level;
+    } else {
+      byClaim.set(note.claim_id, { claimId: note.claim_id, claim: note.claim, notes: [note], nnn: [], status, display: level });
+    }
   }
-  return [...byClaim].map(([claimId, claimNotes]) => {
-    const statuses = claimNotes.map(noteStatus);
-    const displays = statuses.map((status) => display[status]);
-    return {
-      claimId,
-      claim: claimNotes[0]!.claim,
-      notes: claimNotes.sort(originalsFirst),
-      nnn: [...nnn.values()].filter((e) => e.claim_id === claimId),
-      status: STATUS_RANK.find((status) => statuses.includes(status))!,
-      display: DISPLAY_RANK.find((level) => displays.includes(level))!,
-    };
-  });
+  // Associate each entry once rather than scanning every entry for every claim.
+  for (const entry of nnn.values()) byClaim.get(entry.claim_id)?.nnn.push(entry);
+  const groups = [...byClaim.values()];
+  for (const group of groups) group.notes.sort(originalsFirst);
+  return groups;
 }
 
 /** The note tallies for the popup. `helpful`, `needsRatings` and `notHelpful`

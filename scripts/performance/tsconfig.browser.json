@@ -1,0 +1,5 @@
+{
+  "extends": "../../src/everything-extension/tsconfig.json",
+  "include": ["./followup-browser.ts", "../../src/everything-extension/.wxt/**/*.d.ts"],
+  "exclude": ["../../node_modules"]
+}
